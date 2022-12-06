@@ -1,0 +1,7 @@
+{
+  "name": "AlquiNow",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
