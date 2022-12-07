@@ -14,9 +14,10 @@ import { RegistroComponent } from './componentes/registro/registro.component';
 import { InicioComponent } from './componentes/inicio/inicio.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { FormsModule } from '@angular/forms';
+import { RecordarContrasenaComponent } from './componentes/recordar-contrasena/recordar-contrasena.component';
 
 @NgModule({
-  declarations: [AppComponent, RegistroComponent,InicioComponent,LoginComponent],
+  declarations: [AppComponent, RegistroComponent,InicioComponent,LoginComponent, RecordarContrasenaComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, 
     AngularFireModule.initializeApp(environment.firebaseConfig),
   AngularFireAuthModule, AngularFirestoreModule, FormsModule],

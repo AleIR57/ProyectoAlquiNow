@@ -32,17 +32,17 @@
 					<label for="exampleInputEmail1">Correo</label>
           <div style = "display: flex;">
             <input type="email" class="form-control form-control-sm" type = "email" name = "email" [(ngModel)] = "LoginUser.email"placeholder = "Digite su correo">
-            <div class = "hola" style = "width: 25%; text-align: center; border: 1px solid lightgray; border-end-end-radius: .25rem; border-start-end-radius: .25rem; border-left: 0px; "><img src = "../../../assets/icon/correo.png" style = "width: 45%; margin-top: 1%; vertical-align: middle; cursor: pointer;"></div>
+            <div class = "hola" style = "width: 25%; text-align: center; border: 1px solid lightgray; border-end-end-radius: .25rem; border-start-end-radius: .25rem; border-left: 0px; "><img src = "../../../assets/icon/correo.png" style = "width: 45%; margin-top: 1%; vertical-align: middle; cursor: pointer; filter: invert(23%) sepia(0%) saturate(2718%) hue-rotate(135deg) brightness(92%) contrast(80%)"></div>
           </div>
 					
 				</div>
         
 				<div class="form-group">
 					<label for="exampleInputPassword1">Contraseña</label>
-					<a href="#" style="float:right;font-size:12px;">¿Olvidó su contraseña?</a>
+					<a href="#" style="float:right;font-size:12px;" routerLink = "/recordar-contrasena">¿Olvidó su contraseña?</a>
           <div style = "display: flex;">
             <input type="password" class="form-control form-control-sm icon" id="exampleInputPassword1" name = "password" placeholder = "Digite su contraseña" [(ngModel)] = "LoginUser.password" style = "width: 80%;">
-            <div class = "hola" style = "width: 20%; text-align: center; border: 1px solid lightgray; border-end-end-radius: .25rem; border-start-end-radius: .25rem; border-left: 0px; "><img src = "../../../assets/icon/ojo-abierto.png" style = "width: 50%; vertical-align: middle; cursor: pointer;"></div>
+            <div class = "hola" style = "width: 20%; text-align: center; border: 1px solid lightgray; border-end-end-radius: .25rem; border-start-end-radius: .25rem; border-left: 0px; "><img src = "../../../assets/icon/ojo-cerrado.png" style = "width: 50%; vertical-align: middle; cursor: pointer; filter: invert(23%) sepia(0%) saturate(2718%) hue-rotate(135deg) brightness(92%) contrast(80%)" id = "imagenPassword" (click) = "mostrarContrasena()"></div>
           </div>
 					
 				</div>

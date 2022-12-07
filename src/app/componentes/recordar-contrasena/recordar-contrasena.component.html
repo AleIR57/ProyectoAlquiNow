@@ -1,3 +1,50 @@
+<!-- <div>
+  <label>Email</label>
+  <input type = "email" name = "email" [(ngModel)] = "LoginUser.email"placeholder = "password">
+  <Label>Password</Label>
+  <input type = "text" name = "password" placeholder = "password" [(ngModel)] = "LoginUser.password">
+
+  <button (click) = "login(LoginUser)">Guardar</button>
+</div> -->
+
+<!-- <div>
+  <a  (click) = "signInWithGoogle()">Hola</a>
+</div>
+
 <p>
-  recordar-contrasena works!
-</p>
+  login works!
+</p> -->
+
+
+<div class="global-container">
+	<div class="card login-form">
+	<div class="card-body">
+    <div class = "text-left">
+      <img src = "../../../assets/icon/flecha-volver.png" class = "flecha-volver" routerLink ="/inicio-sesion">
+    </div>
+		<h2 class="card-title text-center">AlquiNow</h2>
+		<div class="card-text">
+			<!--
+			<div class="alert alert-danger alert-dismissible fade show" role="alert">Incorrect username or password.</div> -->
+			<form>
+				<!-- to error: add class "has-danger" -->
+        <div class="form-group">
+          <h5 class = "text-center" for="exampleInputPassword1">Recuperar Contraseña</h5>
+        </div>
+				<div class="form-group">
+					<label class ="text-center" for="exampleInputEmail1">Por favor ingrese su correo electrónico para enviar una petición para recuperar su contraseña</label>
+          <div style = "display: flex;">
+            <input type="email" class="form-control form-control-sm" style = "margin-top: 5%;"type = "email"[(ngModel)] ="email" name = "email" placeholder = "Digite su correo">
+           
+          </div>
+					
+				</div>
+
+        <div class = "col-md-12 text-center">
+          <button type="submit" class="btn btn-primary" (click) = "recuperarContrasena()" >Recuperar Contraseña</button>
+        </div>
+			</form>
+		</div>
+	</div>
+</div>
+</div>
