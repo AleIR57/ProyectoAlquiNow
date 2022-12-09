@@ -71,11 +71,297 @@ h5{
 
 .navbar{
   font-size: 16px;
+  top: 0;
+  left: 0;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-expand-lg .navbar-nav .nav-link{
   padding: 0 20px;
-  color: black;
+  color: rgb(90, 90, 90);
   text-decoration: none;
   transition: 0.3s ease;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link:hover{
+  padding: 0 20px;
+  color: rgb(96, 56, 118);
+  font-weight: bold;
+  transition: 0.3 ease;
+}
+
+.navbar i{
+  font-size: 1.2rem;
+  padding: 0 7px;
+  cursor: pointer;
+  color: black;
+  transition: 0.3s ease;
+ 
+}
+
+
+#bar{
+  font-size: 1.5rem;
+  padding: 7px;
+  cursor: pointer;
+ 
+  transition: 0.3s ease;
+  color: black;
+}
+
+#bar:hover,
+#bar:active{
+  color: black;
+
+}
+
+.navbar-light .navbar-toggler{
+  border: none;
+  outline: none;
+}
+
+@media only screen and (max-width: 991px){
+  body > nav > div > button:hover,
+  body > nav > div > button:focus{
+    background-color: rgb(96, 56, 118);
+  }
+
+  #navbarSupportedContent > ul{
+    margin: 1rem;
+   
+    text-align: center;
+  }
+
+  #navbarSupportedContent > ul > li:nth-child(n) > a{
+    padding: 10px 0; 
+  }
+}
+
+#home{
+  background-color: white;
+}
+
+#home span{
+  color: rgb(0, 173, 208);
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+.button{
+  font-size: 0.8rem;
+  font-weight: 700;
+  outline: none;
+  border: none;
+  background: linear-gradient(90deg, rgb(96, 56, 118) 25%, rgb(0, 173, 208) 100%);
+  color: white;
+  
+  padding: 13px 30px;
+  cursor: pointer;
+  border-radius: 8px;
+  text-transform: uppercase;
+  transition: 0.3s ease;
+}
+
+button:hover{
+  transform: translateY(-0.4em);
+}
+
+#home{
+  background: url('../../assets/icon/fondo.jpg');
+  background-size: cover;
+
+  margin: 0px;
+  width: 100%;
+  height: 80vh;
+  background-position: right 73% ;
+  
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+#home h2{
+  margin: 0px;
+  color: rgb(96, 56, 118);
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  font-weight: bold;
+  
+}
+
+#home h1{
+  color: black;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+#home p{
+  color: black;
+ font-size: 20px;
+}
+
+#new .one img{
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+
+#new .one .details{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: 0.3s ease;
+}
+
+#new .one:hover .details{
+  cursor: pointr;
+  background-color: rgb(0, 173, 208, 0.3);
+}
+
+#new .one .details button{
+  display: inline-block;
+  
+  font-size: 14px;
+  font-weight: 500;
+  color: #2a2a2a;
+  background: none;
+  text-transform: uppercase;
+  padding: 2.5px;
+  border-bottom: 1px solid #2a2a2a;
+  transform: translateY(70px);
+  transition: 0.3s ease;
+}
+
+#new .one .details button:hover{
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+
+#new .one .details{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: start;
+}
+
+.product{
+  cursor: pointer;
+  margin-bottom: 2rem;
+  border: 1px solid lightgray;
+  border-radius: 8px;
+}
+
+.product img{
+  transition: 0.3s all;
+}
+
+.prouduct:hover img{
+  opacity: 0.7;
+}
+
+.product .buy-btn{
+  background: #2a2a2a;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: 0.3s all;
+}
+
+.product:hover .buy-btn{
+
+  transform: translateY(0);
+  opacity: 1;
+
+}
+
+hr{
+  width: 30px;
+  height: 2px;
+  background-color: #1d1d1d;
+}
+
+.star{
+  padding: 10px 0;
+}
+
+.star i{
+  font-size: 0.8rem;
+  color: goldenrod;
+}
+
+#banner{
+  background: url('../../assets/icon/fondo.jpg');
+  background-size: cover;
+  margin: 0px;
+  width: 100%;
+  height: 60vh;
+  background-position: right 73% ;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#banner h4{
+  color: #D8D8D8D8;
+}
+
+#banner h1{
+  color: #fff;
+}
+
+#banner button{
+  background-color: #fb774b;
+}
+
+footer{
+  background-color: #2222;
+}
+
+footer h5{
+  color: #D8D8D8D8;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+footer li{
+  padding-bottom: 4px;
+}
+
+footer li a{
+  font-size: 0.8rem;
+  color: #999;
+}
+
+footer li a:hover{
+  color: #D8D8D8D8;
+}
+
+footer p{
+  color: #999;
+  font-size: 0.8rem;
+}
+
+footer .copyright a{
+  color: #000;
+  width: 38px;
+  height: 38px;
+  background-color: #fff;
+  display: inline-block;
+  text-align: center;
+  line-height: 38px;
+  border-radius: 50%;
+  transition: 0.3s ease;
+  margin: 0 5px;
+}
+
+footer .copyright a:hover{
+  color: #fff;
+  background-color: #fb774b;
 }
