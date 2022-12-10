@@ -1,0 +1,37 @@
+<h2>Componente SHOW</h2>
+
+<ion-content>
+  <div class="card">
+    <div class="card-header">
+      Quote
+    </div>
+    <div class="card-body">
+      <table class = "table table-hover table-striped table-responsive">
+        <thead class = "bg-dark text-white">
+          <tr>
+            <th>Nombre</th>
+            <th>Descripción</th>
+            <th>Usuario poseedor</th>
+            <th>Precio alquiler</th>
+            <th>Tiempo de alquiler</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor = "let producto of Productos">
+            <td>{{producto.nombre}}</td>
+            <td>{{producto.descripcion}}</td>
+            <td>{{producto.idUsuarioPoseedor}}</td>
+            <td>{{producto.precio}}</td>
+            <td>{{producto.tiempoAlquiler}}</td>
+            <td>
+              <button routerLink = "/editar-producto/{{producto.id}}" class = "btn bt-outline"><i class = "fa-solid fa-pen"></i></button>
+              <button (click) ="deleteRow(producto)" class = "btn btn-outline-danger"><i class = "fa-solid fa-trash"></i></button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+</ion-content>
