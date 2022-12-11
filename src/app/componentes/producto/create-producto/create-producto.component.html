@@ -1,42 +1,84 @@
-<p>
-  create-producto works!
-</p>
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Nav</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="card" style = "width: 90%; margin-left: auto; margin-right: auto; border-radius: 5px; margin-top: 2%; box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;">
+    <div class = "gradient"><label class = "label-gradient">&nbsp;</label></div>
+    <div style = "display: flex">
+      <div class ="col-md-8">
+        <h5 >Crear un Nuevo Producto</h5>
+      </div>
+      <div class = "col-md-4">
+        <button class = "btn bg-info bg-gradient" style ="color: white; float: right; margin-top: 1%;" (click) = "mostrarFotosYVideos()">Fotos y Videos Adjuntos</button>
+      </div>
+    
+     
+    </div>
 
+    <div style = "border-top: 1px solid lightgray">
 
-<form [formGroup] = "productoForm" (ngSubmit) = 'onSubmit()' novalidate>
-  <div class = "mb-3">
-    <label class = "form-label">Nombre</label>
-    <input formControlName = "nombre" type = "text" class = "form-control" required>
-  </div>
-  <div class = "mb-3">
-    <label class = "form-label">Descripción</label>
-    <input formControlName = "descripcion" type = "text" class = "form-control" required>
-  </div>
-  <div class = "mb-3">
-    <label class = "form-label">Precio</label>
-    <input formControlName = "precio" type = "text" class = "form-control" required>
-  </div>
-  <div class = "mb-3">
-    <label class = "form-label">Tiempo Alquiler</label>
-    <input formControlName = "tiempoAlquiler" type = "text" class = "form-control" required>
-  </div>
-  <div class = "mb-3">
-    <label class = "form-label">Cantidad</label>
-    <input formControlName = "cantidad" type = "text" class = "form-control" required>
-  </div>
-  <div class = "mb-3">
-    <label class = "form-label">Fotos</label>
-    <input formControlName = "fotos" type = "text" class = "form-control" required>
-  </div>
-  <div class = "mb-3">
-    <label class = "form-label">Video</label>
-    <input formControlName = "video" type = "text" class = "form-control" required>
-  </div>
-  <div class = "mb-3">
-    <label class = "form-label">Categoría</label>
-    <input formControlName = "categoria" type = "text" class = "form-control" required>
+    </div>
+   
+    <div class="card-body">
+  
+      <form [formGroup] = "productoForm" (ngSubmit) = 'onSubmit()' novalidate>
+        <div class = "mb-3">
+          <label class = "form-label">Nombre</label>
+          <input formControlName = "nombre" type = "text" class = "form-control" required>
+        </div>
+        <div class = "mb-3">
+          <label class = "form-label">Descripción</label>
+          <textarea formControlName = "descripcion" type = "text" class = "form-control" required></textarea>
+        </div>
+        <div class = "mb-3">
+          <label class = "form-label">Precio</label>
+          <input formControlName = "precio" type = "number" class = "form-control" required>
+        </div>
+       
+        <div class = "mb-3">
+          <label class = "form-label">Cantidad Disponible</label>
+          <input formControlName = "cantidad" type = "number" class = "form-control" required>
+        </div>
+        <div class = "mb-3">
+          <label class = "form-label">Fotos</label>
+          <input type = "file" multiple accept="image/*" (change) = 'onChange($event)' class = "form-control" required style = "padding-bottom: 35px;">
+        </div>
+      
+        <div class = "mb-3">
+          <label class = "form-label">Video</label>
+          <input formControlName = "video" type = "file" class = "form-control" (change) = 'onChange($event)' accept="video/*" required style = "padding-bottom: 35px;">
+        </div>
+        <div class = "mb-3">
+          <label class = "form-label">Categoría</label>
+          <select  class = "form-control">
+            <option>
+              Categoría 1
+            </option>
+            <option>
+              Categoría 2
+            </option>
+          </select>
+        </div>
+        <div class = "mb-3">
+          <label class = "form-label">Marca</label>
+          <input formControlName = "marca" type = "text" class = "form-control" required>
+        </div>
+        <div class = "mb-3">
+          <label class = "form-label">Modelo</label>
+          <input formControlName = "modelo" type = "text" class = "form-control" required>
+        </div>
+      
+        <div class = "col-md-12 text-center">
+          <button [disabled] = '!productoForm.valid' type = "submit" class = "btn bg-info bg-gradient" style = "color: white;">Crear Producto</button>
+        </div>
+      
+      
+      </form>
+    </div>
   </div>
 
-  <button [disabled] = '!productoForm.valid' type = "submit" class = "btn btn-primary">Store</button>
-
-</form>
+  
+  
+</ion-content>

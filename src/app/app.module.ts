@@ -18,14 +18,16 @@ import { RecordarContrasenaComponent } from './componentes/recordar-contrasena/r
 import { CreateProductoComponent } from './componentes/producto/create-producto/create-producto.component';
 import { ShowProductoComponent } from './componentes/producto/show-producto/show-producto.component';
 import { EditProductoComponent } from './componentes/producto/edit-producto/edit-producto.component';
-
+import {provideStorage, getStorage } from '@angular/fire/storage';
+import { FIREBASE_OPTIONS } from '@angular/fire/compat';
+import { Observable, Subscriber } from 'rxjs';
 
 @NgModule({
   declarations: [AppComponent, RegistroComponent,InicioComponent,LoginComponent, RecordarContrasenaComponent, CreateProductoComponent, ShowProductoComponent, EditProductoComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, 
     AngularFireModule.initializeApp(environment.firebaseConfig),
   AngularFireAuthModule, AngularFirestoreModule, FormsModule, ReactiveFormsModule],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, {provide: FIREBASE_OPTIONS, useValue: environment.firebaseConfig}],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

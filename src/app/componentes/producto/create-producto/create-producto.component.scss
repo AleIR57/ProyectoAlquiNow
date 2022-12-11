@@ -1,3 +1,45 @@
 *{
     background-color: white;
 }
+
+.ion-page{
+    background-color: white !important;
+}
+
+.navbar{
+    font-size: 16px;
+    top: 0;
+    left: 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-expand-lg .navbar-nav .nav-link{
+    padding: 0 20px;
+    color: rgb(90, 90, 90);
+    text-decoration: none;
+    transition: 0.3s ease;
+  }
+  
+  .navbar-expand-lg .navbar-nav .nav-link:hover{
+    padding: 0 20px;
+    color: rgb(96, 56, 118);
+    font-weight: bold;
+    transition: 0.3 ease;
+  }
+  
+  .navbar i{
+    font-size: 1.2rem;
+    padding: 0 7px;
+    cursor: pointer;
+    color: black;
+    transition: 0.3s ease;
+   
+  }
+  
+  .gradient{
+    background: linear-gradient(90deg, rgb(96, 56, 118) 25%, rgb(0, 173, 208) 100%);
+}
+
+.label-gradient{
+    opacity: 0;
+}

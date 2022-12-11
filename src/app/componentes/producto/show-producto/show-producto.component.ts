@@ -22,7 +22,10 @@ export class ShowProductoComponent implements OnInit {
         }
       })
     })
+    
   }
+
+
 
   deleteRow = (producto) => this.productoService.deleteProducto(producto)
 }

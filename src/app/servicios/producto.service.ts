@@ -46,7 +46,10 @@ export class ProductoService {
       idUsuarioAlquilador: producto.idUsuarioAlquilador,
       fotos: producto.fotos,
       video: producto.video,
-      categoria: producto.categoria
+      categoria: producto.categoria,
+      modelo: producto.modelo,
+      marca: producto.marca,
+      estado: producto.estado,
     });
   }
 

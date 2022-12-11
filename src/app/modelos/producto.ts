@@ -12,5 +12,8 @@ export class Producto{
     fotos: [string];
     video: string;
     categoria: string;
+    marca: string;
+    modelo: string;
+    estado: string;
 
 }
