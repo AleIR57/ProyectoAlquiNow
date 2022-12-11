@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Producto } from 'src/app/modelos/producto';
 
 import { ProductoService } from 'src/app/servicios/producto.service';
+import { MenuController } from '@ionic/angular';
 
 @Component({
   selector: 'app-show-producto',
@@ -10,7 +11,7 @@ import { ProductoService } from 'src/app/servicios/producto.service';
 })
 export class ShowProductoComponent implements OnInit {
   Productos: Producto[];
-  constructor(private productoService: ProductoService) { }
+  constructor(private productoService: ProductoService, private menuCtrl: MenuController) { }
 
   ngOnInit() {
 
@@ -27,5 +28,10 @@ export class ShowProductoComponent implements OnInit {
 
 
 
-  deleteRow = (producto) => this.productoService.deleteProducto(producto)
+  deleteRow = (producto) => this.productoService.deleteProducto(producto);
+
+  toggleMenu(){
+    this.menuCtrl.toggle();
+  }
+
 }

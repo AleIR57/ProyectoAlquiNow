@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Producto } from '../modelos/producto';
-
+import Swal from 'sweetalert2';
+import { Router } from '@angular/router';
 
 
 @Injectable({
@@ -9,7 +10,7 @@ import { Producto } from '../modelos/producto';
 })
 export class ProductoService {
 
-  constructor(private angularFirestore: AngularFirestore) { }
+  constructor(private angularFirestore: AngularFirestore, private router: Router) { }
 
 
   //Métodos para el CRUD
@@ -24,7 +25,12 @@ export class ProductoService {
   createProducto(producto: Producto){
     return new Promise<any> ((resolve, reject) => {
       this.angularFirestore.collection('productos').add(producto).then((response) =>{
-        console.log(response)
+  
+        Swal.fire({
+          icon: 'success',
+          title: '¡Producto creado correctamente!',
+          heightAuto: false
+        })
       },
       (error) => {
         reject(error)
@@ -54,7 +60,27 @@ export class ProductoService {
   }
 
   deleteProducto(producto){
-    return this.angularFirestore.collection('productos').doc(producto.id).delete();
+    Swal.fire({
+      title: 'Do you want to save the changes?',
+      showDenyButton: true,
+      showCancelButton: true,
+      showConfirmButton: false,
+      heightAuto: false,
+
+      denyButtonText: `Eliminar`,
+    }).then((result) => {
+      /* Read more about isConfirmed, isDenied below */
+      if (result.isConfirmed) {
+       
+       
+      } else if (result.isDenied) {
+        this.angularFirestore.collection('productos').doc(producto.id).delete();
+         Swal.fire({heightAuto: false, title: '¡Eliminado correctamente!', icon: 'success'})
+
+      }
+    })
+    
+    // return this.angularFirestore.collection('productos').doc(producto.id).delete();
   }
 
 }

@@ -21,9 +21,11 @@ import { EditProductoComponent } from './componentes/producto/edit-producto/edit
 import {provideStorage, getStorage } from '@angular/fire/storage';
 import { FIREBASE_OPTIONS } from '@angular/fire/compat';
 import { Observable, Subscriber } from 'rxjs';
+import { MenuComponent } from './componentes/menu/menu.component';
+import { DetailProductoComponent } from './componentes/producto/detail-producto/detail-producto.component';
 
 @NgModule({
-  declarations: [AppComponent, RegistroComponent,InicioComponent,LoginComponent, RecordarContrasenaComponent, CreateProductoComponent, ShowProductoComponent, EditProductoComponent],
+  declarations: [AppComponent, RegistroComponent,InicioComponent,LoginComponent, RecordarContrasenaComponent, CreateProductoComponent, ShowProductoComponent, EditProductoComponent, MenuComponent, DetailProductoComponent],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, 
     AngularFireModule.initializeApp(environment.firebaseConfig),
   AngularFireAuthModule, AngularFirestoreModule, FormsModule, ReactiveFormsModule],

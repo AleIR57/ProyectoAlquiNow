@@ -1,31 +1,85 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Nav</ion-title>
+    <ion-buttons>
+      <ion-button (click) = "toggleMenu()">
+       <ion-icon slot = "icon-only" name = "menu"></ion-icon> 
+       
+      </ion-button>
+      
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-avatar slot="start">
+          <img src = "../../../../assets/icon/bicicleta.png">
+        </ion-avatar>
+      </ion-button>
+    </ion-buttons>
+
   </ion-toolbar>
 </ion-header>
-<ion-content>
-  <table class = "table table-hover table-striped table-bordered table-responsive" style = "margin-left: auto; margin-right: auto;">
-        <thead class = "bg-dark text-white">
-          <tr>
-            <th>Imágen</th>
-            <th>Descripción</th>
-          
-            <th>Acciones</th>
-            
-          </tr>
-        </thead>
-        <tbody *ngFor = "let producto of Productos">
-          
-          <tr *ngFor = "let producto of Productos">
-            <td style = "vertical-align: middle;"><img src = "{{producto.fotos[0]}}" style = "width: 5em; height: 5em; border: 1px solid lightgray; border-radius: 8px; background-color: white;"></td>
-            <td style = "vertical-align: middle;"><div style = "display: flex; flex-direction: column;"><label>Nombre: {{producto.nombre}}</label><label>Marca: {{producto.marca}} </label><label>Modelo: {{producto.modelo}}</label><label>Dueño: {{producto.idUsuarioPoseedor['nombre']}}</label><label>Estado: {{producto.estado}}</label></div></td>
+<ion-content >
+  
+  <div>
+    <ion-card>
+      <div class = "gradient"><label class = "label-gradient">&nbsp;</label></div>
+      <ion-card-header>
+        <ion-card-title>Filtro de productos registrados</ion-card-title>
+        <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+      </ion-card-header>
+    
+      <ion-card-content>
+        Here's a small text description for the card content. Nothing more, nothing less.
+      </ion-card-content>
+    
+      <ion-button fill="clear">Action 1</ion-button>
+      <ion-button fill="clear">Action 2</ion-button>
+    </ion-card>
+
+    <ion-card>
+      <div class = "gradient"><label class = "label-gradient">&nbsp;</label></div>
+      <ion-card-header>
+        <ion-card-title>Listado de Productos Registrados</ion-card-title>
+
+      </ion-card-header>
+    
+      <ion-card-content>
+        <ion-list>
+          <ion-item *ngFor = "let producto of Productos" style = "margin-top: 1%;">
+            <ion-avatar slot="start">
+              <img class = "img-item" alt="Silhouette of a person's head" src="{{producto.fotos[0]}}" />
+            </ion-avatar>
+            <div class ="col-md-12" style = "display: flex;">
+              <div class = "col-md-8" style ="display: flex; flex-direction: column;">
+              
+                <label>{{producto.nombre}} {{producto.marca}} {{producto.modelo}}</label><label>{{producto.idUsuarioPoseedor['nombre']}}</label>
+                <div *ngIf = "producto.estado == 'En espera de aprobación'">
+                  <label style = "color: rgb(13, 179, 165);">{{producto.estado}}</label>
+                </div>
+              </div>
+              
+              <div class ="col-md-4" style = "text-align: center; display: flex;
+              justify-content: center;
+              align-items: center;">
+               <button style ="vertical-align: middle; margin-right: 2%;"routerLink = "" class = "btn btn-outline-success" ><i class = "fas fa-check"></i></button>
+                <button style ="vertical-align: middle; margin-right: 2%;"routerLink = "/detalle-producto/{{producto.id}}" class = "btn btn-outline-dark" ><i class = "fa-solid fa-pen"></i></button>
+                <button (click) ="deleteRow(producto)" class = "btn btn-outline-danger"><i class = "fa-solid fa-trash"></i></button>
+              </div>
+            </div>
            
-            <td style = "vertical-align: middle; ">
-              <button routerLink = "/editar-producto/{{producto.id}}" class = "btn btn-outline-dark" ><i class = "fa-solid fa-pen"></i></button>
-              <button (click) ="deleteRow(producto)" class = "btn btn-outline-danger"><i class = "fa-solid fa-trash"></i></button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+           
+          </ion-item>
+        </ion-list>
+       
+      </ion-card-content>
+    
+     
+    </ion-card>
+    
+  </div>
+  <ion-fab slot="fixed" horizontal="end" vertical="bottom" routerLink = "/crear-producto">
+    <ion-fab-button>
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
   
 </ion-content>

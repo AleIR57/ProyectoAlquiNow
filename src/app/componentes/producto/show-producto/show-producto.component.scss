@@ -5,3 +5,14 @@ table th{
 table td{
     color: black;
 }
+
+.img-item{
+    border-radius: unset;
+    border: 1px solid lightgray;
+    padding: 1px;
+  
+}
+
+.gradient{
+    background: linear-gradient(90deg, rgb(96, 56, 118) 25%, rgb(0, 173, 208) 100%);
+}

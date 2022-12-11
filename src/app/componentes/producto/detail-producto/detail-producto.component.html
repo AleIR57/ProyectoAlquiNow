@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Nav</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <section class = "container sproduct my-2 pt-2">
+    <div class = "row mt-5">
+      <div class = "col-lg-5 col-md-12 col-12">
+        <img class ="img-fluid w100 pb-1" src = "../../../../assets/icon/logo.png" style = "border: 1px solid rgb(0, 173, 208);">
+        <div class = "small-img-group">
+          <div class = "small-img-col">
+            <img src = "../../../../assets/icon/correo.png" width = "100%" class = "small-img" alt = "">
+          </div>
+          <div class = "small-img-col">
+            <img src = "../../../../assets/icon/correo.png" width = "100%" class = "small-img" alt = "">
+          </div>
+          <div class = "small-img-col">
+            <img src = "../../../../assets/icon/correo.png" width = "100%" class = "small-img" alt = "">
+          </div>
+          <div class = "small-img-col">
+            <img src = "../../../../assets/icon/correo.png" width = "100%" class = "small-img" alt = "">
+          </div>
+        </div>
+      </div>
+      <div class = "col-lg-6 col-md-12 col-12">
+        <div class = "col-md-12" style = "display: flex; justify-content: space-between; padding: 0px;">
+          <h6>{{categoria}}</h6>
+          <a class = "btn btn-outline-dark" style = "float: right;"><i class = "fa-solid fa-pen"></i></a>
+        </div>
+
+      
+        <h3 class = "py-1 font-weight-bold">{{nombre}}</h3>
+        <h2 class = "py-1 font-weight-bold" style = "color: green;">${{precio}}</h2>
+        <div class = "star">
+          <i class = "fas fa-star" style = "color: yellow;"></i>
+          <i class = "fas fa-star" style = "color: yellow;"></i>
+          <i class = "fas fa-star" style = "color: yellow;"></i>
+          <i class = "fas fa-star" style = "color: yellow;"></i>
+          <i class = "fas fa-star" style = "color: yellow;"></i>
+        </div>
+     
+     
+       
+        <h4 class = "mt-2 mb-3">Descripción  del producto</h4>
+        <span>{{descripcion}}</span>
+        <h5 class = "mt-1 mb-1">Marca</h5>
+        <p>{{marca}}</p>
+        <h5 class = "mt-1 mb-1">Modelo</h5>
+        <p>{{modelo}}</p>
+        <h5 class = "mt-1 mb-1">Publicado por</h5>
+        <div style = "display: flex;">
+          
+          <div class = "width: 20%;">
+            <ion-avatar>
+              <img src = "../../../../assets/icon/bicicleta.png" style = "border-radius: 5px; border: 1px solid lightgray;">
+            </ion-avatar>
+          </div>
+         
+          <p style = "margin-top: 3%; margin-left: 1%;">Nombre del dueño del producto</p>
+        </div>
+       
+      </div>
+    </div>
+  </section>
+
+  <footer class = "mt-5 py-5">
+
+  </footer>
+</ion-content>
+
+

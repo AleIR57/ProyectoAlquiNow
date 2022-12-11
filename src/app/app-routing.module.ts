@@ -4,6 +4,7 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { InicioComponent } from './componentes/inicio/inicio.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { CreateProductoComponent } from './componentes/producto/create-producto/create-producto.component';
+import { DetailProductoComponent } from './componentes/producto/detail-producto/detail-producto.component';
 import { EditProductoComponent } from './componentes/producto/edit-producto/edit-producto.component';
 import { ShowProductoComponent } from './componentes/producto/show-producto/show-producto.component';
 import { RecordarContrasenaComponent } from './componentes/recordar-contrasena/recordar-contrasena.component';
@@ -44,6 +45,9 @@ const routes: Routes = [
   },
   {
     path: 'editar-producto/:id', component: EditProductoComponent
+  },
+  {
+    path: 'detalle-producto/:id', component: DetailProductoComponent
   },
 
 ];

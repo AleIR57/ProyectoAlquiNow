@@ -123,8 +123,8 @@ export class CreateProductoComponent implements OnInit {
   ngOnInit() {}
 
   onSubmit(){
+    this.router.navigate(['mostrar-producto']);
     this.productoService.createProducto(this.productoForm.value);
-    this.router.navigate(['']);
   }
 
   mostrarFotosYVideos(){
